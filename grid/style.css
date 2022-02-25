@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&family=Open+Sans:wght@400;700;800&display=swap');
+
+:root {
+  --green:rgba(25, 178, 108) COLOR VERDE;
+}
+html, body {
+    font-family: Montserrat, Sans;
+    font-size: 16px;
+}
+header { 
+    background-image: url(../assets/image-back.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../assets/image-back.jpg');
+    background-position: center center;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+h1, h3 {
+    color: white;
+    position: relative;
+     left: 50%;
+     top: 40%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+    }
+ h1 {
+    font-weight: 600;
+    font-size: 52px;
+    margin:15px
+    }
+h3 {
+      font-weight: 300;
+    }
+.navbar {
+      display: grid; 
+      grid-template-columns: 0.7fr 0.5fr 1.2fr; 
+      grid-template-rows: 0.3fr; 
+      gap: 0px 0px; 
+      grid-template-areas: 
+        "logo empty menu-items"; 
+      background-color: rgb(255, 255, 255);
+    }
+.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+     }
+.logo { 
+  grid-area: logo; 
+}
+.logo img {
+  width: 200px;
+}
+.empty { 
+  grid-area: empty; 
+}
+.menu-items { 
+  grid-area: menu-items;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+ }
+ .menu-items a {
+  color: #363636;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+ }
+.menu-items ul, li{
+  list-style: none;
+  display: inline;
+}
+/* comienzo de la segunda seccion */
+
+.section {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "content content content"
+      "songs music stream";
+  }
+  
+  .content { 
+    grid-area: content; 
+    text-align: center;
+  }
+  
+  .songs { 
+    grid-area: songs;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+  .music { 
+    grid-area: music; 
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .stream { 
+    grid-area: stream; 
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .section h2 {
+    text-decoration: underline;
+    text-decoration-color:rgba(25, 178, 108);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+  }
+
+.card img {
+  width: 100px;
+  max-height: 100px;
+}
+.card h4 {
+  color:rgba(25, 178, 108);
+}
+.card p {
+  font-weight: 200; 
+}
+
+/* comienzo de la tercera seccion */
+
+.container {  
+  display: grid;
+  grid-template-columns: 1.2fr 0.7fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "subtitle subtitle screen"
+    "search logo-2 screen"
+    "browse logo-2 screen"
+    "discover logo-2 screen";
+    background-color: rgba(25, 178, 108);
+}
+
+.screen { 
+  grid-area: screen;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin-top: 50px;
+
+}
+.screen img {
+  width: 260px;
+}
+.subtitle { 
+  grid-area: subtitle;
+  display: grid;
+  margin-left: 80px;
+  margin-top: 40px;
+}
+.subtitle h2 {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color:white
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+.search { 
+  grid-area: search; 
+  display: grid;
+  margin-left: 80px;
+  color:white
+}
+
+.browse { grid-area: browse;
+  display: grid;
+  margin-left: 80px;
+  color:white
+}
+
+.discover { 
+  grid-area: discover;
+  display: grid;
+  margin-left: 80px;
+  color:white
+ }
+
+.logo-2 { 
+  display: grid;
+  align-items:;
+  justify-items: center;
+  margin: auto;
+}
+.logo-2 img {
+  width: 150px;
+  justify-content: center;
+}
+.description h4 {
+  margin-block: 5px;
+  padding-top: 10px;
+  font-size: 24px;
+
+}
+.description p {
+  margin: 2px
+}
