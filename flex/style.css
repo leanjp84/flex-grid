@@ -37,10 +37,6 @@ h3 {
   text-underline-offset: 10px;
 }
 
-header {
-  margin-top: 20px;
-}
-
 .logo {
   width: 200px;
 }
@@ -55,6 +51,10 @@ nav li {
   list-style-type: none;
 }
 
+nav li + li {
+  padding-top: 20px;
+}
+
 .nav-bar a {
   display: block;
   text-decoration: none;
@@ -62,20 +62,23 @@ nav li {
   color: var(--black);
 }
 
-a + a {
-  margin-top: 10px;
-}
-
 .nav-bar a:hover {
   color: var(--green);
 }
 
+svg {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
 header {
-  background-image: url("../assets/image-back.jpeg");
+  margin-top: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/image-back.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 350px;
   display: flex;
   text-align: center;
   align-items: center;
@@ -134,8 +137,20 @@ h4 + .text {
 /* MQ para tablet y PC */
 
 @media (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--white);
+  }
+
+  svg {
+    visibility: hidden;
+  }
+  
   header {
     margin-top: 0;
+    height: 500px;
   }
   h1 {
     font-size: 54px;
@@ -164,8 +179,8 @@ h4 + .text {
     gap: 70px;
   }
 
-  a + a {
-    margin-top: 0;
+  nav li + li {
+    padding-top: 0;
   }
 
   .what-spotify {
